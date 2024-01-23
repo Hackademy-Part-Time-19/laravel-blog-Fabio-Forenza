@@ -1,0 +1,49 @@
+body {
+    background-color: #495057;
+    color: white;
+}
+
+.navbar-custom {
+    background-color: #212529;
+    color: #333;
+}
+
+.navbar-nav {
+    padding-right: 30px;
+}
+
+.articoli {
+    margin: 30px;
+    padding: 15px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+a {
+    cursor: pointer;
+    position: relative;
+}
+
+.with-underline::after {
+    content: '';
+    /* Contenuto generato pseudo-elemento */
+    display: block;
+    height: 2px;
+    /* Altezza della linea */
+    width: 0;
+    /* Larghezza iniziale della linea */
+    background-color: white;
+    /* Colore della linea */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+    /* Transizione sull'animazione della larghezza */
+}
+
+.with-underline:hover::after {
+    width: 100%;
+    /* Larghezza della linea quando ci passi sopra con il mouse */
+}
