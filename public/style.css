@@ -28,22 +28,68 @@ a {
 
 .with-underline::after {
     content: '';
-    /* Contenuto generato pseudo-elemento */
     display: block;
     height: 2px;
-    /* Altezza della linea */
     width: 0;
-    /* Larghezza iniziale della linea */
     background-color: white;
-    /* Colore della linea */
     position: absolute;
     bottom: 0;
     left: 0;
     transition: width 0.3s;
-    /* Transizione sull'animazione della larghezza */
 }
 
 .with-underline:hover::after {
     width: 100%;
-    /* Larghezza della linea quando ci passi sopra con il mouse */
+}
+
+.card {
+    margin: 40px;
+    background-color: #333;
+    height: 300px;
+}
+
+.card-title {
+    height: 80px;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.back-link-container {
+    margin: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-link {
+    color: #333;
+    text-decoration: none;
+}
+
+
+.back-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+
+.back-link:hover::after {
+    width: 100%;
+    color: white;
+    text-decoration: none;
 }
